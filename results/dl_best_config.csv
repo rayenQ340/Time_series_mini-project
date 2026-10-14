@@ -1,0 +1,5 @@
+arch,featset,w,units,dropout,lr,val_loss,val_baseline,epochs
+GRU,avec chaleur,6,8,0.0,0.01,1.5895,2.0246,15
+GRU,univarié,12,8,0.0,0.01,1.4846,2.0246,10
+LSTM,avec chaleur,6,8,0.2,0.01,1.7781,2.0246,6
+LSTM,univarié,12,8,0.0,0.01,1.6563,2.0246,8

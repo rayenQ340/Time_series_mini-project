@@ -1,0 +1,7 @@
+modèle,RMSE h=24 par germe : min,max,écart-type
+GRU + chaleur (clim.),152.405,167.868,7.269
+GRU + chaleur (oracle),120.375,145.967,10.21
+GRU univarié,188.58,197.145,3.839
+LSTM + chaleur (clim.),157.957,179.069,8.349
+LSTM + chaleur (oracle),147.153,173.795,10.47
+LSTM univarié,183.373,196.834,6.965
