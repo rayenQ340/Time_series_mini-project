@@ -1,6 +1,16 @@
-numpy
-pandas
-matplotlib
-statsmodels
-scipy
-xlrd
+# Installation (Python 3.12 ou plus récent) :  pip install -r python/requirements.txt
+# Versions "==" : relevées dans les sorties des notebooks déjà exécutés. Versions ">=" : non relevées, bornes inférieures raisonnables.
+numpy==2.5.3
+pandas==3.0.6
+statsmodels==0.15.0
+pmdarima==2.1.1
+arch==8.0.0
+scipy>=1.14
+matplotlib>=3.9
+scikit-learn>=1.5
+xlrd>=2.0.1          # lecture du fichier .xls de production (ancien format Excel malgré l'extension .xlsx)
+tensorflow>=2.16     # LSTM/GRU (05_lstm_gru.ipynb, dl_utils.py), CPU suffisant
+jupyter
+nbclient
+nbformat
+ipykernel

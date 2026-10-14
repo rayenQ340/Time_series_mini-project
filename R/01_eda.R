@@ -16,7 +16,7 @@ cat("R", R.version.string, "| forecast", as.character(packageVersion("forecast")
 
 # ---------------------------------------------------------------- 1. DONNÉES --------------
 # Production : malgré son extension, le fichier est un ancien format .xls -> read_xls() (read_excel() se fie à l'extension et échoue).
-prod <- read_xls("data/opendataproductionmensuelleelectriciteparproducteurs.xlsx",
+prod <- read_xls("data/opendataproductionmensuelleelectriciteparproducteurs (1).xlsx",
                    col_types = "text")                   # tout en texte : la colonne date est mixte
 names(prod) <- c("date", "steg", "ipp", "ipp_solar", "auto", "total_raw")
 
@@ -39,7 +39,7 @@ prod <- prod |>
   select(month, steg, ipp, ipp_solar, auto, production_gwh, core)
 
 # Température : journalier (Open-Meteo, réanalyse, point de grille Tunis) -> agrégats mensuels
-w <- read.csv("data/open-meteo-36_80N10_17E14m.csv", skip = 3, col.names = c("date", "tmean", "tmax", "tmin"))
+w <- read.csv("data/open-meteo-36.80N10.17E14m.csv", skip = 3, col.names = c("date", "tmean", "tmax", "tmin"))
 w$month <- floor_date(as.Date(w$date), "month")
 temp <- w |> group_by(month) |>
   summarise(t_mean = mean(tmean), t_max_mean = mean(tmax), t_max_peak = max(tmax), t_min_mean = mean(tmin),
